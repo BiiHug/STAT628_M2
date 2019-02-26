@@ -4,7 +4,7 @@ import numpy as np
 import re
 from gensim.corpora.dictionary import Dictionary
 import operator
-
+import matplotlib.pyplot as plt
 
 #这一个part是在处理商家数据
 ##读入数据
@@ -155,3 +155,60 @@ carFriendList = list(map(carFriend, carparkList))
 pd.Series(carFriendList).value_counts()
 
 
+##处理hours
+dfResTrain['hours'].head(5)
+###天数？
+daysList = []
+def checkDays(self):
+    try:
+        daysList.append(len(self.keys()))
+    except AttributeError:
+        daysList.append(None)
+dfResTrain['hours'].apply(checkDays)
+###可以发现大部分都是5天以上的，我认为在这里依据天数进行划分是没有意义的
+pd.Series(daysList).value_counts()
+
+###时间段？
+hoursList = []
+def checkHours(self):
+    try:
+        hoursList.append(list(self.values()))
+    except AttributeError:
+        hoursList.append(None)
+dfResTrain['hours'].apply(checkHours)
+
+###计算时间段长度，这里只取第一天的长度
+def calcuHours(self):
+    try:
+        openTime = pd.to_datetime(self[0].split('-')[0], format="%H:%M")
+        closeTime = pd.to_datetime(self[0].split('-')[1], format="%H:%M")
+        return (closeTime - openTime).seconds/3600
+    except TypeError:
+        return None
+
+hoursRange = list(map(calcuHours, hoursList))
+pd.Series(hoursRange).describe()
+###这里最好画个图吧，我的air不行了
+###大于15小时，昼夜餐厅
+len((np.where(pd.Series(hoursRange)>15))[0])
+###小于6小时，特殊营业餐厅
+len((np.where(pd.Series(hoursRange)<6))[0])
+
+def cateHours(self):
+    type = 'all_day'
+    try:
+        openTime = pd.to_datetime(self[0].split('-')[0], format="%H:%M")
+        closeTime = pd.to_datetime(self[0].split('-')[1], format="%H:%M")
+        range = (closeTime - openTime).seconds/3600
+        if range > 15:
+            type = '24_hours'
+        if range < 6:
+            if closeTime < pd.to_datetime('15:00', format="%H:%M"):
+                type = 'brunch'
+            else:
+                type = 'dinner'
+    except TypeError:
+        type = None
+    return type
+hoursCate = list(map(cateHours, hoursList))
+pd.Series(hoursCate).value_counts()
