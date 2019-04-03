@@ -1,4 +1,4 @@
-# STAT628 
+# STAT628_Yelp
 
 This is a brief intrudction to the contents of the repository.
 
