@@ -40,7 +40,7 @@ chinese_cs['enthusiastic']
 sum(chinese_cs>100)
 chinese_cs[chinese_cs>100]
 chinese_x = chinese_dt[,chinese_cs>100]
-chinese_y = chineseStars>=3
+chinese_y = chineseStars>=4
 
 chinese_leaveout = sample(1:nrow(chinese_dt), 20000)
 chinese_fit = glmnet(chinese_x[-chinese_leaveout,], chinese_y[-chinese_leaveout] , family = "binomial", alpha  = 0.9)
