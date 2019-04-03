@@ -1,12 +1,25 @@
-## 中国餐厅
+# STAT628 
 
-我们把类别细分到chinese restaurants如何？
+This is a brief intrudction to the contents of the repository.
 
-### 原因：
+## data
 
-1. 我们自己对它很熟悉(background)
-2. 与其他类型的餐厅相比，我发现中国餐厅的第二(第三等等..)的标签很少，也就是说类型更专一。
+The data folder contains the raw data **BodyFat.csv** and the cleaned data **fat3.csv** with the same name in our code.
 
-### data:
+## code
 
-data里放了一个处理后的Chinese restaurants的数据，没有包括评论(太大了放不下)。
+The code folder contains all the codes we used for analysis.
+
+For people who're interested in our analysis, he/she could find our final codes for Goal 1 in the subfolder **goal_1**, and our final codes for the best prediction in kaggle could be founded in the subfolder **goal_2**. 
+
+## image
+
+The image folder contains all the plots in our **final_code**, **slides**, and **notebook**. The name of each img shows its source. 
+
+## executive summary
+
+The executive summary folder contains an executive Jupyter Notebook summary **summary.ipynb** and a readable pdf summary **summary.pdf**.
+
+## slides
+
+The slides folder contains the slides pdf for our presentation.
