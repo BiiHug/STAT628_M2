@@ -14,7 +14,7 @@ For people who're interested in our analysis, he/she could find our final codes 
 
 ## image
 
-The image folder contains all the plots in our **slides**, and **executive summary**. The name/git comments of each img shows its source. 
+The image folder contains all the plots in our **slides**, and **summary**. The name/git-comments of each img shows its source. 
 
 ## summary
 
