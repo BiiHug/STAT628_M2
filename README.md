@@ -8,7 +8,7 @@ The data folder contains a url to the Google Drive containing the orginal review
 
 ## code
 
-The code folder contains all the codes we used for analysis.
+The code folder contains all the codes we used for analysis/prediction.
 
 For people who're interested in our analysis, he/she could find our final codes for Goal 1 in the subfolder **goal_1**, and our final codes for the best prediction in kaggle could be founded in the subfolder **goal_2**. 
 
