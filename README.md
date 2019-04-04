@@ -18,7 +18,7 @@ The image folder contains all the plots in our **slides**, and **summary**. The 
 
 ## summary
 
-The summary folder contains an executive Jupyter Notebook summary **Module2_final_report.ipynb**. The images in this report also live there, but you can still find them in the image folder.
+The summary folder contains an executive Jupyter Notebook summary **Module2_final_report.ipynb** and a pdf version **Module2_final_report.pdf**. The images in this report also live there, but you can still find them in the image folder.
 
 ## slides
 
