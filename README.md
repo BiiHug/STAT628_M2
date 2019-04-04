@@ -4,7 +4,7 @@ This is a brief intrudction to the contents of the repository.
 
 ## data
 
-The data folder contains the raw data **BodyFat.csv** and the cleaned data **fat3.csv** with the same name in our code.
+The data folder contains a url to the Google Drive containing the orginal review/business data **chinesereview.csv** and the simplified version **chineseAllReview.csv**, along with the three transformed data. The code for transformation could be found at: **code** >> **goal_1** >> **text_processing**.
 
 ## code
 
@@ -14,7 +14,7 @@ For people who're interested in our analysis, he/she could find our final codes 
 
 ## image
 
-The image folder contains all the plots in our **final_code**, **slides**, and **notebook**. The name of each img shows its source. 
+The image folder contains all the plots in our **slides**, and **executive summary**. The name/git comments of each img shows its source. 
 
 ## executive summary
 
