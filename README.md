@@ -16,9 +16,9 @@ For people who're interested in our analysis, he/she could find our final codes 
 
 The image folder contains all the plots in our **slides**, and **executive summary**. The name/git comments of each img shows its source. 
 
-## executive summary
+## summary
 
-The executive summary folder contains an executive Jupyter Notebook summary **summary.ipynb** and a readable pdf summary **summary.pdf**.
+The summary folder contains an executive Jupyter Notebook summary **Module2_final_report.ipynb**. The images in this report also live there, but you can still find them in the image folder.
 
 ## slides
 
